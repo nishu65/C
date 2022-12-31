@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "01BASIC.C": "cpp",
+        "FUNCTION.C": "cpp",
+        "stdio.h": "c"
+    }
+}
