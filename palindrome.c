@@ -1,3 +1,4 @@
+/*----------------------------------------using pointer to function .................................................*/
 #include <stdio.h>
 int fun1(int *);
 void fun2(int, int);
@@ -14,14 +15,14 @@ int main()
 }
 int fun1(int *p)
 {
-    int rev = 0, r;
+    int rev = 0, rem;
     int i = *p;
     for (; i != 0;)
     {
-        r = i % 10;
-        rev = rev * 10 + r;
+        rem = i % 10;
+        rev = rev * 10 + rem;
+        i = i / 10;
     }
-    printf("%d", rev);
     return (rev);
 }
 void fun2(int x, int y)
@@ -32,7 +33,7 @@ void fun2(int x, int y)
     }
     else
     {
-        printf("NUMBER IS PERLINDROME ");
+        printf("NUMBER IS NOT PERLINDROME ");
     }
 }
 

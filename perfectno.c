@@ -1,13 +1,14 @@
 #include <stdio.h>
-void f3(int sum,int a){
+#include<stdlib.h>
+void f3( unsigned long int sum,unsigned long int a){
     if (sum==a){
-        printf(" THE NUMBER IS PERFECT NUMBER : %d\n",sum);
+        printf(" THE NUMBER IS PERFECT NUMBER : %lu\n",sum);
     }
     /*else{
         printf("THE NUMBER IS NOT PERFECT NUMBER .\n");
     }*/
 }
-int f2(int i ,int a){
+int f2(unsigned long int i ,unsigned long int a){
     if (a%i==0){
        return i ;
     }
@@ -16,10 +17,10 @@ int f2(int i ,int a){
     }
     
 }
-void f1(int a){
-    int sum =0;
-    int i=1;
-    int x=a/2;
+void f1(unsigned long int a){
+     unsigned long int  sum =0;
+     unsigned long int i=1;
+    unsigned long int x=a/2;
     for (i;i<=x;i++){
         sum=sum+f2(i,a);
        
@@ -28,17 +29,21 @@ void f1(int a){
     f3(sum,a);
 
 }
-void f4(int a){
-    int b=1;
+void f4(unsigned long int a){
+    unsigned long int b=1;
     for (b;b<=a;b++){
         f1(b);
     }
 
 }
 int main(){
-    int a;
-    int*p=&a;
-    printf("ENTER A NO : ");
-    scanf("%d",p);
+
+    unsigned long int a;
+    unsigned long int *p=&a;
+    printf("ENTER A RANGE [0 TO N] TO CHECK  HOW MANY PERFECT NUMBER PRESENT : "); 
+    scanf("%lu",p);
     f4(a);
+    printf("FOR EXIT ");
+    system("pause");
+    return 0;
 }
